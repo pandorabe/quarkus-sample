@@ -29,4 +29,4 @@ spec:
       - build
     params:
     - name: ARGS
-      value: "rollout latest quarkus-app"
+      value: "rollout latest quarkus-app-tekton"
