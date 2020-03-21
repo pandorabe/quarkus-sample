@@ -1,14 +1,14 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "quarkus-sample-pipeline"
+  name: "quarkus-jenkins-pipeline"
 spec:
   strategy:
     type: JenkinsPipeline
     jenkinsPipelineStrategy:
       jenkinsfile: |-
-        def repositoryPath = 'https://gitlab.com/pandorabe/quarkus-test.git'
-        def appName = 'quarkus-app'
+        def repositoryPath = 'https://github.com/pandorabe/quarkus-sample.git'
+        def appName = 'quarkus-app-jenkins'
         pipeline {
           agent {
             label 'maven'
