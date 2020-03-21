@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  name: sample-pipeline-run
+  generateName: sample-pipeline-run-
+spec:
+  pipelineRef:
+    name: sample-pipeline-tekton
+  serviceAccountName: 'pipeline'
+  resources:
+  - name: app-source
+    resourceRef:
+      name: pipeline-source
+  - name: app-image
+    resourceRef:
+      name: pipeline-image
