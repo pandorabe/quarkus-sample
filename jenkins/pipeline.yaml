@@ -53,7 +53,7 @@ spec:
                 script {
                   openshift.withCluster() {
                     openshift.withProject() {
-                      while (!openshift.selector("istag", "ubi-minimal:latest").exists()) {
+                      while (!openshift.selector("istag", "ubi-minimal:8.1").exists()) {
                         echo "wait downloading ubi-minimal finished..."
                         sleep(1)
                       }
